@@ -58,5 +58,6 @@ x(j)=x(i)
 y(j)=x(i+1)
 
 z(j)=x(i+2)
+
 enddo                                      ! Atom loop over
 
