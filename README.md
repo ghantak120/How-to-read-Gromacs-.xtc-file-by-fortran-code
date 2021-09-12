@@ -13,8 +13,6 @@ Here natoms is the number of atom in your system which will read from .xtc file
 
 maxatom is the number of atoms defined by you
 
-do ibk=1,nblock                         ! block loop start
-
 nread=0                                 ! #of frame read
 
 nused=0                                 ! #of frame used for calculation
@@ -23,7 +21,7 @@ do nput=1,nxtc                          ! .xtc loop start
 
 call xdrfopen(iunit,ifile(ibk,nput),"r",ret)
 
-do ii=1,nframes                         ! frame loop start
+do ii=1,nframes                         ! frame loop start Define initially how many no of frames you want to use
 
 call readxtc(iunit,natoms,step,time,box,x,prec,ret)
 
